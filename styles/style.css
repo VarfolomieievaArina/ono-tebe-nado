@@ -21,10 +21,10 @@
     text-underline-position: under;
 }
 
-.header__links-list-item_no-bullit{
+.header__links-list-item_no-bullit {
     text-decoration: none;
     list-style-type: none;  
-    }
+}
 
 .header_logo {
     display: block;
@@ -36,7 +36,7 @@
     height: 105px;
 }
 
-.header_address{
+.header_address {
     width: 240px;
     display: flex;
     justify-content: start;
@@ -81,7 +81,7 @@
     font-size: 100px;
     font-style: normal;
     font-weight: 700;
-    text-transform: uppercase; 
+    text-transform: uppercase;
 }
 
 .aligned-text {
@@ -99,7 +99,7 @@
     z-index: 1;
 }
 
-.aligned-text_right{
+.aligned-text_right {
     display: flex;
     align-self: end;
     line-height: 100%;
@@ -115,7 +115,7 @@
     letter-spacing: 0;
 }
 
-.cover__description{
+.cover__description {
     color:#fff;
     text-transform: uppercase;
     font-size: 22px;
@@ -128,14 +128,14 @@
     z-index: 1;
 }
 
-.cover__description-text{
+.cover__description-text {
     word-spacing: 18px;
     justify-content: space-between;
     line-height: 28px;
     text-align: right;
 }
 
-.bet-button{
+.bet-button {
     background-color: transparent;
     text-align: right;
     border: 1px solid #FFF;
@@ -257,7 +257,7 @@
 .about__column {
     display: flex;
     padding: 0;
-    justify-content: center;   
+    justify-content: center;
 }
 
 .about__logo {

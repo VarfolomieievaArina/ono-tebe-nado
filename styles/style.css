@@ -9,7 +9,7 @@
 .header_menu-list {
     display:flex;
     font-style: normal;
-    gap: 32px;
+    gap: 33px; /*изменила отступ между списком с 32 на 33*/
     height: 21px;
     list-style-type: circle;
 }
@@ -163,6 +163,10 @@
     gap: 25px;
     list-style-type: none;
   }
+
+  .card-link{
+    text-decoration: none;
+  }
   
   .lots__card-list-item {
     display: flex;
@@ -248,16 +252,18 @@
 
 .about {
     display: grid;
-    grid-template-columns: 430px 1fr;
+    grid-template-columns: 1fr 2fr;
     padding: 0 50px 180px 50px;
     column-gap: 25px;
-    justify-content: flex-end;
+    justify-content: end; /*через это свойство выровняла элементы сетки вдоль оси строки */
+    min-width: 1340px; /*с указанием минимальной ширины все элементы в блоке встают на свои места.*/
 }
 
 .about__column {
     display: flex;
     padding: 0;
     justify-content: center;
+    max-width: 430px;
 }
 
 .about__logo {
@@ -280,7 +286,7 @@
 .about-title {
     display: flex;
     color: #000;
-    font-family: 'Raleway' 'sans-serif';
+    font-family: 'Raleway', "Arial", sans-serif; /*к основному шрифту добавила альтернативный шрифт и тип засечек*/
     font-size: 40px;
     font-style: normal;
     font-weight: 700;
@@ -297,6 +303,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    min-width: 885px;
 }
 
 .footer {

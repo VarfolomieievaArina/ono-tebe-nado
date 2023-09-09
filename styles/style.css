@@ -163,10 +163,10 @@
     gap: 25px;
     list-style-type: none;
   }
-
-  .card-link{
+  
+  .card-link {
     text-decoration: none;
-  }
+}
   
   .lots__card-list-item {
     display: flex;

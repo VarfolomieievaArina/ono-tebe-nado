@@ -33,11 +33,13 @@
         />
       </a>
 
-      <section class="header_address">
-        <a href="tel:+99995555555">+9 999 555 5555</a>
-        <a href="mailto:info@sobaka.ge">info@sobaka.ge</a>
-        <a>наб. Принсенграхт 263-265, Амстердам</a>
-      </section>
+      <address class="header_address"><!--использую семантический тег <address>-->
+        <a href="tel:+99995555555">+9 999 555 5555</a><br><!--принудительный перенос текста на новую строку с помощью тэга <br>-->
+        <a href="mailto:info@sobaka.ge">info@sobaka.ge</a><br><!--принудительный перенос текста на новую строку с помощью тэга <br>-->
+        <p>наб. Принсенграхт 263-265,<br><!--принудительный перенос текста на новую строку с помощью тэга <br>-->
+           Амстердам
+        </p><!--использую для текста тег <р>-->
+      </address>
     </header>
 
     <main>
@@ -60,7 +62,7 @@
         </h1>
         <div class="cover__description">
           <p class="cover__description-text">Аукцион вещей, в которые никто не верил</p>
-          <p class="bet-button" >Сделать ставку</p>
+          <button class="bet-button" >Сделать ставку</button><!--из этого элемента сделала кнопку-->
         </div>
       </section>
 
@@ -69,7 +71,7 @@
          <ul class="lots__card-list">
           <li class="lots__card-list-item">
             <a class="card-link" href="#0"><!-- в описании сказано:"Карточка лежит в ссылке", добавила атрибут href на карточки -->
-              <article class="card_type_film">
+              <article class="card card_type_film"><!--создала единый класс для стилей карточек-->
                 <div class="overlay"></div>
                 <h3 class="card__title">Фильм режиссёра, который бросил киношколу</h3>
                 <p class="card__text">Не просто бросил, а ушёл с первой лекции. Какой была бы ваша ставка, если бы вы не знали, что режиссёр — Пол Томас Андерсон?</p>
@@ -79,7 +81,7 @@
 
           <li class="lots__card-list-item">
             <a class="card-link" href="#0"><!-- добавила атрибут href -->
-              <article class="card_type_book">
+              <article class="card card_type_book">
                 <div class="overlay"></div>
                 <h3 class="card__title">Книга, где описан один скучный день из жизни рекламного агента</h3>
                 <p class="card__text">Объёмом почти в тысячу страниц. Иногда без знаков препинания и с переходами на древнеанглийский. В ней одновременно рассказывается о 16 июня 1904 года и об истории литературы, начиная с античных времён. И это всё накладывается на эпическую поэму Гомера. Сколько бы вы поставили на «Улисса» Джеймса Джойса?</p>
@@ -89,7 +91,7 @@
 
           <li class="lots__card-list-item">
             <a class="card-link" href="#0"><!--  добавила атрибут href -->
-              <article class="card_type_picture">
+              <article class="card card_type_picture">
                 <div class="overlay"></div>
                 <h3 class="card__title">Картина, которую повторит даже 5-летний сын маминой подруги</h3>
                 <p class="card__text">Ну действительно, там линия, тут кружочек, а здесь и вовсе что-то похожее на инфузорию-туфельку. Никаких полей, лесов, котиков… Сколько бы вы на такое поставили, если бы не знали, что это — одна из революционных работ Кандинского?</p>
@@ -120,11 +122,13 @@
    </main>
 
     <footer class="footer">
-      <section class="adress">
-        <a href="tel:+99995555555">+9 999 555 5555</a>
-        <a href="mailto:info@sobaka.ge">info@sobaka.ge</a>
-        <a>наб. Принсенграхт 263-265, Амстердам</a>
-      </section>
+      <address class="adress"><!--использую семантический тег <address>-->
+        <a href="tel:+99995555555">+9 999 555 5555</a><br><!--принудительный перенос текста на новую строку с помощью тэга <br>-->
+        <a href="mailto:info@sobaka.ge">info@sobaka.ge</a><br>
+        <p>наб. Принсенграхт 263-265,<br>
+           Амстердам
+        </p><!--использую для текста тег <р>-->
+      </address>
 
       <nav class="footer__menu">
         <ul class="footer__menu-list">
@@ -140,35 +144,37 @@
         </ul>
       </nav>
 
-      <ul class="footer__social-list">
-        <li class="footer__social-list-item">
-          <a class="footer__social-link">
-            <img
-          class="footer__social-icon"
-          src="./images/yt.svg"
-          alt="ютуб"
-        />
-          </a>
-        </li>
-        <li class="footer__social-list-item">
-          <a class="footer__social-link">
-            <img
-          class="footer__social-icon"
-          src="./images/vk.svg"
-          alt="вконтакте"
-        />
-          </a>
-        </li>
-        <li class="footer__social-list-item">
-          <a class="footer__social-link">
-            <img
-          class="footer__social-icon"
-          src="./images/pinterest.svg"
-          alt="пинтерест"
-             />
-          </a>
-        </li>
-      </ul>
+      <nav><!--добавила тег <nav> для улучшения семантики-->
+        <ul class="footer__social-list">
+          <li class="footer__social-list-item">
+            <a class="footer__social-link">
+              <img
+                class="footer__social-icon"
+                src="./images/yt.svg"
+                alt="ютуб"
+              />
+            </a>
+          </li>
+          <li class="footer__social-list-item">
+            <a class="footer__social-link">
+              <img
+                class="footer__social-icon"
+                src="./images/vk.svg"
+                alt="вконтакте"
+              />
+            </a>
+          </li>
+          <li class="footer__social-list-item">
+            <a class="footer__social-link">
+              <img
+                class="footer__social-icon"
+                src="./images/pinterest.svg"
+                alt="пинтерест"
+              />
+            </a>
+          </li>
+        </ul>
+      </nav>
 
     </footer>
   </body>

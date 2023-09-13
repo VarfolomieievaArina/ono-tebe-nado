@@ -171,9 +171,9 @@
   }
   
   .card-link {
-    text-decoration: none;   
+    text-decoration: none;
 }
-  
+
   .lots__card-list-item {
     display: flex;
     width: 430px;
@@ -330,5 +330,5 @@
     display: flex;
     gap: 50px;
     margin-left: 207px;
-    list-style-type: none;  
+    list-style-type: none;
 }

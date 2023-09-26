@@ -9,7 +9,7 @@
 .header_menu-list {
     display:flex;
     font-style: normal;
-    gap: 33px; /*изменила отступ между списком с 32 на 33*/
+    gap: 33px;
     list-style-type: circle;
 }
 
@@ -21,8 +21,12 @@
 }
 
 .header__links-list-item_no-bullit {
-    text-decoration: none;
     list-style-type: none;
+    pointer-events: none;
+}
+
+.header_menu-item_active {
+    text-decoration: none;
 }
 
 .header_logo {
@@ -36,7 +40,6 @@
 }
 
 .header_address {
-    max-width: fit-content;/* ограничила максимальную ширину ссылки в соответствии с контентом*/
     flex-direction: column;
     margin-left: auto;
     font-size: 18px;
@@ -45,6 +48,10 @@
     line-height: 24.3px;
     justify-self: end;
     text-underline-position: under;
+}
+
+.link {
+    max-width: fit-content; /*ограничила максимальную ширину каждой ссылки в соответствии с контентом*/
 }
 
 .cover {
@@ -60,7 +67,7 @@
 
 .overlay {
     position: absolute;
-    inset: 0;/*указала смещение позиционированного элемента сразу со всех четырёх сторон*/
+    inset: 0;
     width: 100%;
     height: 100%;
     background: #000;
@@ -134,7 +141,7 @@
     background-color: transparent;
     color: #FFF;
     text-align: center;
-    font-family: Raleway;
+    font-family: 'Raleway', "Arial", sans-serif; /*указала альтернативный шрифт*/
     font-size: 22px;
     font-style: normal;
     font-weight: 400;
@@ -142,14 +149,13 @@
     text-transform: uppercase;
     border: 1px solid #FFF;
     padding: 12px 32px;
-    /*добавила нужные значения для стилизации кнопки*/
 }
 
 .lots {
     padding: 180px 50px;
-  }
-  
-  .lots__heading {
+}
+
+.lots__heading {
     color: #000;
     font-family: 'Raleway', "Arial", sans-serif;
     font-size: 40px;
@@ -158,30 +164,29 @@
     line-height: normal;
     text-transform: uppercase;
     padding-left: 40px;
-  }
+}
   
-  .lots__card-list {
-    min-width: 430px;
+.lots__card-list {
     display: flex;
     min-height: 100%;
     padding: 27px 0 30px 0;
     gap: 25px;
     list-style-type: none;
-    flex-wrap: wrap; /*этим значением разрешила перенос элементов, которые не влезают в контейнер при меньшей ширине экрана*/
-  }
-  
-  .card-link {
+    flex-wrap: wrap;
+}
+
+.card-link {
     text-decoration: none;
 }
 
-  .lots__card-list-item {
+.lots__card-list-item {
     display: flex;
     width: 430px;
     min-height: 450px;
     flex-grow: 1;
-  }
+}
 
-  .card { /*указала необходимые стили, которые повторяются в карточках*/
+.card {
     position: relative;
     background-size: cover;
     background-repeat: no-repeat;
@@ -191,22 +196,21 @@
     display: flex;
     flex-direction: column;
     justify-content:space-between;
-  }
-  
-  .card_type_film {
-    background-image: url(../images/card-lot-01.jpg);
-  }
-  
-  .card_type_book {
-    background-image: url(../images/card-lot-02.jpg);
+}
 
-  }
-  
-  .card_type_picture {
+.card_type_film {
+    background-image: url(../images/card-lot-01.jpg);
+}
+
+.card_type_book {
+    background-image: url(../images/card-lot-02.jpg);
+}
+
+.card_type_picture {
     background-image: url(../images/card-lot-03.jpg);
 }
 
-  .card__title {
+.card__title {
     position: relative;
     color: #FFF;
     font-family: 'Raleway', "Arial", sans-serif;
@@ -217,9 +221,9 @@
     text-transform: uppercase;
     padding: 50px 40px 0;
     z-index: 1;
-  }
+}
 
-  .card__text {
+.card__text {
     position: relative;
     color: #fff;
     font-family: 'Raleway', "Arial", sans-serif;
@@ -229,9 +233,9 @@
     font-weight: 400;
     padding: 0 40px 50px;
     z-index: 1;
-  }
-  
-  .lots__look-more-link {
+}
+
+.lots__look-more-link {
     color: #000;
     font-family: 'Raleway', "Arial", sans-serif;
     font-style: normal;
@@ -240,14 +244,14 @@
     font-size: 20px;
     margin-left: 40px;
     text-underline-position: under;
-  }
+}
 
 .about {
     display: grid;
     grid-template-columns: 1fr 2fr;
     padding: 0 50px 180px 50px;
-    column-gap: 25px;
-    justify-content: end; /*через это свойство выровняла элементы сетки вдоль оси строки */
+    column-gap: 13px; /*в макете указан отступ 25px. При отсупе 25px текст "сильно уходит вправо" и не сходится с макетом через плагин Pixel Perfect. Поэтому я уменьшила оступ, чтобы все сходилось*/
+    justify-content: end;
 }
 
 .about__column {
@@ -277,13 +281,13 @@
 .about-title {
     display: flex;
     color: #000;
-    font-family: 'Raleway', "Arial", sans-serif; /*к основному шрифту добавила альтернативный шрифт и тип засечек*/
+    font-family: 'Raleway', "Arial", sans-serif;
     font-size: 40px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
     text-transform: uppercase;
-    padding: 101px 0 0 0; /*убрала отступ справа*/
+    padding: 101px 0 0 0;
 }
 .about-text {
     display: flex;
@@ -294,7 +298,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    min-width: 885px;
+    max-width: 885px; /*использовала максимальную ширину вместо минимальной*/
 }
 
 .footer {
@@ -304,7 +308,7 @@
 }
 
 .adress {
-    max-width: fit-content;/* ограничила максимальную ширину ссылки в соответствии с контентом*/
+    max-width: fit-content;
     flex-direction: column;
     font-size: 18px;
     color: #000;
@@ -312,7 +316,6 @@
     line-height: 24.3px;
     text-underline-position: under;
 }
-
 
 .footer__menu-list {
     color: #000;
@@ -328,7 +331,12 @@
 
 .footer__social-list {
     display: flex;
-    gap: 50px;
-    margin-left: 207px;
+    justify-content: end;
+    gap: 48px;
     list-style-type: none;
+}
+
+.footer__social-list-item { /*задала размеры изображениям*/
+    width: 48px;
+    height: 48px;
 }

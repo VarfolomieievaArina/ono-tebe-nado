@@ -6,8 +6,8 @@
 
 body {
   min-width: 1100px;
-  max-width: 1440px;
-  margin: auto;/*сменила значение с нуля на auto, чтобы контент был по центру на более широких монторах.*/
+  max-width: 1440px;/* если я убираю ограничение, то страница становится шире макета с фигмы (по PixelPerfect)*/
+  margin: auto;
   font-family: Raleway, sans-serif;
 }
 

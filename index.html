@@ -14,13 +14,13 @@
       <nav class="header_menu">
         <ul class="header_menu-list">
           <li class="header_menu-item header_menu-item_active header__links-list-item_no-bullit">
-            <a class="header_menu-link">главная</a><!-- на данный момент мы находимся на странице "главная", поэтому href не ставлю -->
+            <a class="header_menu-link header_menu-item_active" href="#0">главная</a> <!-- Для всех ссылок задала атрибут href -->
           </li>
           <li class="header_menu-item">
-            <a class="header_menu-link" href="#0">посмотреть лоты</a><!-- поменяла заглушку с # на #0 -->
+            <a class="header_menu-link" href="#0">посмотреть лоты</a>
           </li>
           <li class="header_menu-item">
-            <a class="header_menu-link" href="#0">об аукционе</a><!-- поменяла заглушку с # на #0 -->
+            <a class="header_menu-link" href="#0">об аукционе</a>
           </li>
         </ul>
       </nav>
@@ -33,12 +33,12 @@
         />
       </a>
 
-      <address class="header_address"><!--использую семантический тег <address>-->
-        <a href="tel:+99995555555">+9 999 555 5555</a><br><!--принудительный перенос текста на новую строку с помощью тэга <br>-->
-        <a href="mailto:info@sobaka.ge">info@sobaka.ge</a><br><!--принудительный перенос текста на новую строку с помощью тэга <br>-->
-        <p>наб. Принсенграхт 263-265,<br><!--принудительный перенос текста на новую строку с помощью тэга <br>-->
+      <address class="header_address">
+        <a class ="link" href="tel:+99995555555">+9 999 555 5555</a><br>
+        <a class ="link" href="mailto:info@sobaka.ge">info@sobaka.ge</a><br>
+        <p>наб. Принсенграхт 263-265,<br>
            Амстердам
-        </p><!--использую для текста тег <р>-->
+        </p>
       </address>
     </header>
 
@@ -62,7 +62,7 @@
         </h1>
         <div class="cover__description">
           <p class="cover__description-text">Аукцион вещей, в которые никто не верил</p>
-          <button class="bet-button" >Сделать ставку</button><!--из этого элемента сделала кнопку-->
+          <button class="bet-button" >Сделать ставку</button>
         </div>
       </section>
 
@@ -70,8 +70,8 @@
         <h2 class="lots__heading">Лоты</h2> 
          <ul class="lots__card-list">
           <li class="lots__card-list-item">
-            <a class="card-link" href="#0"><!-- в описании сказано:"Карточка лежит в ссылке", добавила атрибут href на карточки -->
-              <article class="card card_type_film"><!--создала единый класс для стилей карточек-->
+            <a class="card-link" href="#0">
+              <article class="card card_type_film">
                 <div class="overlay"></div>
                 <h3 class="card__title">Фильм режиссёра, который бросил киношколу</h3>
                 <p class="card__text">Не просто бросил, а ушёл с первой лекции. Какой была бы ваша ставка, если бы вы не знали, что режиссёр — Пол Томас Андерсон?</p>
@@ -80,7 +80,7 @@
           </li>
 
           <li class="lots__card-list-item">
-            <a class="card-link" href="#0"><!-- добавила атрибут href -->
+            <a class="card-link" href="#0">
               <article class="card card_type_book">
                 <div class="overlay"></div>
                 <h3 class="card__title">Книга, где описан один скучный день из жизни рекламного агента</h3>
@@ -90,7 +90,7 @@
           </li>
 
           <li class="lots__card-list-item">
-            <a class="card-link" href="#0"><!--  добавила атрибут href -->
+            <a class="card-link" href="#0">
               <article class="card card_type_picture">
                 <div class="overlay"></div>
                 <h3 class="card__title">Картина, которую повторит даже 5-летний сын маминой подруги</h3>
@@ -122,29 +122,29 @@
    </main>
 
     <footer class="footer">
-      <address class="adress"><!--использую семантический тег <address>-->
-        <a href="tel:+99995555555">+9 999 555 5555</a><br><!--принудительный перенос текста на новую строку с помощью тэга <br>-->
-        <a href="mailto:info@sobaka.ge">info@sobaka.ge</a><br>
+      <address class="adress">
+        <a class ="link" href="tel:+99995555555">+9 999 555 5555</a><br> <!-- добавила новый класс "link" для ссылок, чтобы правильно использовать свойство max-width: fit-content; -->
+        <a class ="link" href="mailto:info@sobaka.ge">info@sobaka.ge</a><br>
         <p>наб. Принсенграхт 263-265,<br>
            Амстердам
-        </p><!--использую для текста тег <р>-->
+        </p>
       </address>
 
       <nav class="footer__menu">
         <ul class="footer__menu-list">
           <li class="footer_menu-item footer__menu-link_active">
-            <a class="footer__menu-link">главная</a><!-- на данный момент мы находимся на странице "главная", поэтому href не ставлю -->
+            <a class="footer__menu-link">главная</a>
           </li>
           <li class="footer_menu-item">
-            <a class="footer_menu-link" href="#0">посмотреть лоты</a><!-- поменяла заглушку с # на #0 -->
+            <a class="footer_menu-link" href="#0">посмотреть лоты</a>
           </li>
           <li class="footer_menu-item">
-            <a class="footer_menu-link" href="#0">об аукционе</a><!-- поменяла заглушку с # на #0 -->
+            <a class="footer_menu-link" href="#0">об аукционе</a>
           </li>
         </ul>
       </nav>
 
-      <nav><!--добавила тег <nav> для улучшения семантики-->
+      <nav>
         <ul class="footer__social-list">
           <li class="footer__social-list-item">
             <a class="footer__social-link">
